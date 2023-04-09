@@ -5,13 +5,11 @@ Welcome to the ChatGPT Discord Bot! This is an awesome bot that brings the power
 
 ## Why did I build this bot? Answer: Privacy 📖
 
-The idea for this ChatGPT Discord Bot was born out of a deep concern for privacy and data security. As technology enthusiasts, we love the idea of bringing AI-powered chatbots to Discord servers to enhance interactions and provide value. However, during our exploration of existing solutions, we realized that many chatbots lacked transparency in how they handled user data.
+The idea for this ChatGPT Discord Bot was born out of a deep concern for privacy and data security. As technology enthusiasts, we love the idea of bringing AI-powered chatbots to Discord servers to enhance interactions and provide value. However, during our exploration of existing solutions, I realized that many chatbots lacked transparency in how they handled user data.
 
-I wanted to create a bot that respects user privacy while delivering powerful AI chat capabilities. We were particularly mindful of the fact that data tracking and lack of privacy control are prevalent in many existing bots. Therefore, we designed our bot with privacy and user control at its core, allowing users to toggle between public and private modes.
+I wanted to create a bot that respects user privacy while delivering powerful AI chat capabilities. We were particularly mindful of the fact that data tracking and lack of privacy control are prevalent in many existing bots. Therefore, I designed our bot with privacy and user control at its core, allowing users to toggle between public and private modes.
 
-I built the ChatGPT Discord Bot using OpenAI's GPT-3.5 Turbo model, and we implemented a MongoDB-backed solution to store interactions securely. Our goal is to provide users with dynamic and interactive AI-powered conversations while upholding the highest standards of privacy.
-
-I hope you enjoy using the ChatGPT Discord Bot as much as we enjoyed building it, and we look forward to seeing the amazing conversations you'll have with it!
+I built the ChatGPT Discord Bot using OpenAI's GPT-3.5 Turbo model, and we implemented a MongoDB-backed solution to store interactions securely. My goal is to provide users with dynamic and interactive AI-powered conversations while upholding the highest standards of privacy.
 
 ## Features 💡
 
@@ -33,7 +31,7 @@ I hope you enjoy using the ChatGPT Discord Bot as much as we enjoyed building it
 
 1. Clone the repository
 
-git clone https://github.com/username/chatgpt-discord-bot.git
+git clone https://github.com/ameyxd/chatgpt-discord-bot.git
 
 2. Navigate to the project directory
 
