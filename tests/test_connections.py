@@ -1,8 +1,12 @@
+"""
+Project: discord-chatgpt-bot
+Author: ameyxd
+Copyright (c) 2023 Amey Ambade
+Description: Test connections to the services used
+"""
 import unittest
-from discord.ext import commands
 from pymongo import MongoClient
 import requests
-import os
 from config.settings import DISCORD_BOT_TOKEN, GPT_API_KEY, GPT_API_URL, MONGO_CONNECTION_STRING, MONGO_DB_NAME
 
 

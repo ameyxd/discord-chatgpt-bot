@@ -1,3 +1,9 @@
+"""
+Project: discord-chatgpt-bot
+Author: ameyxd
+Copyright (c) 2023 Amey Ambade
+Description: Test discord bot functioning
+"""
 import unittest
 from unittest.mock import AsyncMock, MagicMock
 from bot.main import ask, private, public

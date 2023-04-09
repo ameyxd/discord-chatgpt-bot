@@ -1,7 +1,14 @@
-# tests/test_mongo.py
+"""
+Project: discord-chatgpt-bot
+Author: ameyxd
+Copyright (c) 2023 Amey Ambade
+Description: Test MongoDB interaction
+"""
+
 import unittest
 from pymongo import MongoClient
 from bot.main import MONGO_CONNECTION_STRING, MONGO_DB_NAME, store_interaction
+
 
 class TestMongoDB(unittest.TestCase):
     def setUp(self):
@@ -22,6 +29,7 @@ class TestMongoDB(unittest.TestCase):
     def tearDown(self):
         # Clean up the test data from the database
         self.interactions.delete_many({})
+
 
 if __name__ == '__main__':
     unittest.main()
