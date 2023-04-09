@@ -47,8 +47,7 @@ async def private(ctx):
 
 # Function to interact with ChatGPT
 import aiohttp
-import logging
-
+# Create a logger for debugging
 logger = logging.getLogger(__name__)
 
 
@@ -57,24 +56,30 @@ async def interact_with_gpt(prompt):
         'Authorization': f'Bearer {GPT_API_KEY}',
         'Content-Type': 'application/json'
     }
-    # Format the request body for the Chat API
     data = {
-        'model': 'davinci',  # Specify the GPT-3 model to use
+        'model': 'gpt-3.5-turbo',
         'messages': [
             {'role': 'system', 'content': 'You are a helpful assistant.'},
-            {'role': 'user', 'content': prompt}  # Use the user's prompt as the input message
+            {'role': 'user', 'content': prompt}
         ],
-        'max_tokens': 100  # Limit the response length
+        'max_tokens': 100
     }
     async with aiohttp.ClientSession() as session:
         async with session.post(GPT_API_URL, headers=headers, json=data) as response:
             response_json = await response.json()
-            logger.info(f"API response: {response_json}")  # Log the full API response
-            gpt_response = response_json['choices'][0]['message']['content']
-            # gpt_response = response_json.get('choices', [{}])[0].get('text', 'No response.')
-            if gpt_response == 'No response.':
-                logger.error(f"Failed to get a response from ChatGPT. Prompt: {prompt}")  # Log an error message
-            return gpt_response.strip()
+
+            # Log the entire API response for debugging
+            logger.info(f"API response: {response_json}")
+
+            try:
+                # Extract the assistant's reply from the API response
+                gpt_response = response_json['choices'][0]['message']['content']
+                return gpt_response.strip()
+            except KeyError:
+                # Handle cases where the expected fields are not present in the API response
+                error_message = response_json.get('error', {}).get('message', 'Unknown error')
+                logger.error(f"Failed to get a response from ChatGPT. Error message: {error_message}")
+                return "Failed to get a response from ChatGPT."
 
 
 # Function to store interactions in MongoDB
