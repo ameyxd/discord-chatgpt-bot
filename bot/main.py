@@ -1,5 +1,9 @@
-
-
+"""
+Project: discord-chatgpt-bot
+Author: ameyxd
+Copyright (c) 2023 Amey Ambade
+Description: Main bot runner on the server
+"""
 import discord
 from discord.ext import commands
 from pymongo import MongoClient
