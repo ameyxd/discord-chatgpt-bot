@@ -1,3 +1,5 @@
+
+
 import discord
 from discord.ext import commands
 from pymongo import MongoClient
@@ -18,7 +20,7 @@ intents.messages = True  # Enable the messages intent
 intents.reactions = True  # Enable the reactions intent (if needed)
 
 # Create an instance of the discord bot and specify a command prefix
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='/', intents=intents)
 
 # Create a MongoClient instance to connect to MongoDB Atlas
 mongo_client = MongoClient(MONGO_CONNECTION_STRING)
