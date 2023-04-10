@@ -18,7 +18,44 @@ I built the ChatGPT Discord Bot using OpenAI's GPT-3.5 Turbo model, and we imple
 - 📜 Context-Aware: The bot maintains the context of the conversation for meaningful interactions.
 - 📈 Scalable: Built with MongoDB for data storage and easy scalability.
 
-## Getting Started 🚀
+## Adding the Bot to Your Discord Server
+
+To invite the bot to your Discord server, follow these steps:
+
+1. Click on the following invite link: [Invite the Bot](https://discord.com/api/oauth2/authorize?client_id=1094658194091024444&permissions=76816&scope=bot)
+
+2. You will be redirected to a page where you can select the server you want to add the bot to.
+
+3. In the "Add Bot to Server" dropdown, select the server where you want the bot to be added.
+
+4. Click the "Authorize" button to add the bot to the selected server.
+
+5. Complete the CAPTCHA verification if prompted.
+
+The bot should now be successfully added to your server and ready to use!
+
+## Using the Bot 🕹️
+
+To interact with the bot, use the following commands in a Discord text channel:
+
+- Use the `/ask` command to chat with the AI. For example:
+
+/ask Where is the tallest building in Atlantis?
+
+- Use the `/public` command to set the bot to public mode. Everyone in the server can use the `/ask` command.
+- Use the `/private` command to set the bot to private mode. Only the admins can use the  `/ask` command. 
+- Use the `/ask` command to ask GPT for answers to your prompts.
+
+## Limitations ⛔
+
+- The bot currently does not support context since the underlying model (GPT-3.5-turbo) is stateless
+- The limit to the output response is 4096 characters, which is another limitation of the underlying model
+
+This is a Work In Progress! I am trying to build a better version of the bot with session history, context and longer response support, so any comments or issues reported are appreciated! 
+
+----------------------------------------
+
+## (OPTIONAL) Getting Started: Development 🚀
 
 ### Prerequisites
 
@@ -50,16 +87,6 @@ MONGO_CONNECTION_STRING=YOUR_MONGO_CONNECTION_STRING
 5. Run the bot
 
 python bot/main.py
-
-## Usage 🕹️
-
-- Use the `/ask` command to chat with the AI. For example:
-
-/ask What is the capital of France?
-
-- Use the `/public` command to set the bot to public mode. Everyone in the server can use the `!ask` command.
-- Use the `/private` command to set the bot to private mode. 
-- Use the `/ask` command to ask GPT for answers to your prompts.
 
 ## Contributing 🤝
 
