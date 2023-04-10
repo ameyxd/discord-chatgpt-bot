@@ -4,6 +4,12 @@ Author: ameyxd
 Copyright (c) 2023 Amey Ambade
 Description: Main bot runner on the server
 """
+import os
+import sys
+
+# Add the parent directory of the 'config' module to the Python module search path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import discord
 from discord.ext import commands
 from pymongo import MongoClient
